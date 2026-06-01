@@ -1,4 +1,11 @@
 {
+  "redirects": [
+    {
+      "source": "/spreadsheet.html",
+      "destination": "/sugargoo-spreadsheet/",
+      "permanent": true
+    }
+  ],
   "headers": [
     {
       "source": "/(.*)",

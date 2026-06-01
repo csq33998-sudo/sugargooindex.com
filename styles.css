@@ -563,6 +563,7 @@ details p {
 
 .site-footer {
   justify-content: space-between;
+  flex-wrap: wrap;
   gap: 18px;
   padding: 28px clamp(18px, 6vw, 72px);
   color: var(--muted);
