@@ -257,9 +257,15 @@ h2 {
   padding: 22px;
   color: #fff;
   background:
-    linear-gradient(180deg, rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.72)),
-    url("https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1100&q=80") center /
-      cover;
+    linear-gradient(90deg, rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.2) 58%, rgba(0, 0, 0, 0.58)),
+    url("/assets/lookbook-red-sneaker.png") center / cover no-repeat;
+}
+
+.home-sneaker-preview {
+  color: #fff;
+  background:
+    linear-gradient(90deg, rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.2) 58%, rgba(0, 0, 0, 0.58)),
+    url("/assets/lookbook-red-sneaker.png") center / cover no-repeat;
 }
 
 .lookbook-card span,
@@ -285,9 +291,15 @@ h2 {
 .lookbook-small {
   min-height: 170px;
   background:
-    linear-gradient(180deg, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.7)),
-    url("https://images.unsplash.com/photo-1552346154-21d32810aba3?auto=format&fit=crop&w=700&q=80") center / cover;
+    linear-gradient(180deg, rgba(0, 0, 0, 0.04), rgba(0, 0, 0, 0.64)),
+    url("/assets/lookbook-red-canvas-sneakers.png") center / cover no-repeat;
   border-radius: 8px;
+}
+
+.home-qc-preview {
+  background:
+    linear-gradient(180deg, rgba(0, 0, 0, 0.04), rgba(0, 0, 0, 0.64)),
+    url("/assets/lookbook-red-canvas-sneakers.png") center / cover no-repeat;
 }
 
 .lookbook-small strong {
@@ -348,7 +360,8 @@ h2 {
 }
 
 .category-grid,
-.product-grid {
+.product-grid,
+.blog-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 14px;
@@ -358,8 +371,13 @@ h2 {
   grid-template-columns: 1.15fr 0.85fr 0.85fr 1.15fr;
 }
 
+.blog-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
 .category-card,
 .product-card,
+.blog-card,
 details,
 .steps li {
   background: var(--surface-strong);
@@ -411,6 +429,49 @@ details p {
   display: grid;
   gap: 14px;
   padding: 16px;
+}
+
+.blog-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 300px;
+  padding: 22px;
+}
+
+.blog-card span {
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.blog-card h3 {
+  margin: 28px 0 12px;
+  font-size: clamp(22px, 3vw, 32px);
+  line-height: 1.08;
+}
+
+.blog-card p {
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.blog-card a {
+  margin-top: auto;
+  color: var(--accent-strong);
+  font-weight: 900;
+}
+
+.blog-hero-preview {
+  background:
+    linear-gradient(90deg, rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.24) 58%, rgba(0, 0, 0, 0.6)),
+    url("/assets/find-jacket-white-black.png") center / cover no-repeat;
+}
+
+.blog-qc-preview {
+  background:
+    linear-gradient(180deg, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.66)),
+    url("/assets/find-hoodie-cream.png") center / cover no-repeat;
 }
 
 .product-card:nth-child(1),
@@ -500,8 +561,8 @@ details p {
 .notes-grid .note-feature {
   color: #fff;
   background:
-    linear-gradient(180deg, rgba(0, 0, 0, 0.12), rgba(0, 0, 0, 0.78)),
-    url("https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=900&q=80") center / cover;
+    linear-gradient(90deg, rgba(0, 0, 0, 0.76), rgba(0, 0, 0, 0.38) 58%, rgba(0, 0, 0, 0.12)),
+    url("/assets/note-sneaker-white-purple.png") center / cover;
   border-color: var(--text);
 }
 
@@ -606,7 +667,8 @@ details p {
   }
 
   .category-grid,
-  .product-grid {
+  .product-grid,
+  .blog-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -636,6 +698,7 @@ details p {
 
   .category-grid,
   .product-grid,
+  .blog-grid,
   .lookbook-row {
     grid-template-columns: 1fr;
   }
