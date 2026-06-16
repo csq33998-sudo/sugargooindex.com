@@ -107,6 +107,10 @@ try {
 
       $candidate = [IO.Path]::GetFullPath((Join-Path $root $decodedPath))
 
+      if (Test-Path -LiteralPath $candidate -PathType Container) {
+        $candidate = [IO.Path]::GetFullPath((Join-Path $candidate "index.html"))
+      }
+
       if (-not $candidate.StartsWith($rootPrefix, [StringComparison]::OrdinalIgnoreCase) -or -not (Test-Path -LiteralPath $candidate -PathType Leaf)) {
         Send-Response $stream 404 "text/plain; charset=utf-8" ([Text.Encoding]::UTF8.GetBytes("Not found")) $null $sendBody
         continue

@@ -20,4 +20,19 @@
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
+  <url>
+    <loc>https://sugargooindex.com/categories/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.86</priority>
+  </url>
+  <url>
+    <loc>https://sugargooindex.com/finds/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.86</priority>
+  </url>
+  <url>
+    <loc>https://sugargooindex.com/guide/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.84</priority>
+  </url>
 </urlset>
